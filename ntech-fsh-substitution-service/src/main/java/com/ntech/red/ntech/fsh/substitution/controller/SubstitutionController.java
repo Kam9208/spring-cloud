@@ -15,6 +15,7 @@ public class SubstitutionController {
 	
 	@GetMapping("/callHello")
 	public String callHello() {
-		return restTemplate.getForObject("http://127.0.0.1:8081/house/hello", String.class);
+		//不直接写固定地址，而是写服务的名称（spring.application.name）（fsh-house）
+		return restTemplate.getForObject("http://fsh-house/house/hello", String.class);
 	}
 }
