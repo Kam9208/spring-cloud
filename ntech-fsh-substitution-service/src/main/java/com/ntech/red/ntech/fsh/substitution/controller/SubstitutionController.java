@@ -18,4 +18,6 @@ public class SubstitutionController {
 		//不直接写固定地址，而是写服务的名称（spring.application.name）（fsh-house）
 		return restTemplate.getForObject("http://fsh-house/house/hello", String.class);
 	}
+	
+	
 }
